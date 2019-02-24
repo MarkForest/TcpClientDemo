@@ -1,0 +1,7 @@
+C:\Users\teacher.STEP\source\repos\TcpClientDemo\TcpClientDemo\bin\Debug\TcpClientDemo.exe.config
+C:\Users\teacher.STEP\source\repos\TcpClientDemo\TcpClientDemo\bin\Debug\TcpClientDemo.exe
+C:\Users\teacher.STEP\source\repos\TcpClientDemo\TcpClientDemo\bin\Debug\TcpClientDemo.pdb
+C:\Users\teacher.STEP\source\repos\TcpClientDemo\TcpClientDemo\obj\Debug\TcpClientDemo.csprojAssemblyReference.cache
+C:\Users\teacher.STEP\source\repos\TcpClientDemo\TcpClientDemo\obj\Debug\TcpClientDemo.csproj.CoreCompileInputs.cache
+C:\Users\teacher.STEP\source\repos\TcpClientDemo\TcpClientDemo\obj\Debug\TcpClientDemo.exe
+C:\Users\teacher.STEP\source\repos\TcpClientDemo\TcpClientDemo\obj\Debug\TcpClientDemo.pdb
