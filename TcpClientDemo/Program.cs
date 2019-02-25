@@ -60,7 +60,6 @@ namespace TcpClientDemo
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
-                    tcpClient.Close();
                     isEnabled = false;
                 }
             }
