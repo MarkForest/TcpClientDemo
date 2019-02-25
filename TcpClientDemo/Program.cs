@@ -38,7 +38,7 @@ namespace TcpClientDemo
                     Console.Write($"{userName}: ");
                     //ввод сообщения
                     string message = Console.ReadLine();
-                    if (message == "%EXIT") throw new Exception("Stopped by ${userName}");
+                    if (message == "%EXIT") throw new Exception($"Stopped by {userName}");
 
                     message = $"{userName}: {message}";
                     //преобразовываем в масив байт
