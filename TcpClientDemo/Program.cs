@@ -17,16 +17,29 @@ namespace TcpClientDemo
             Console.WriteLine("Введите свое имя: ");
             string userName = Console.ReadLine();
             TcpClient tcpClient = null;
+            NetworkStream stream = null;
+            bool isEnabled = false;
+
             try
             {
                 tcpClient = new TcpClient(address, port);
-                NetworkStream stream = tcpClient.GetStream();
+                stream = tcpClient.GetStream();
+                isEnabled = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
-                while (true)
+            while(isEnabled) 
+            {
+                try 
                 {
                     Console.Write($"{userName}: ");
                     //ввод сообщения
                     string message = Console.ReadLine();
+                    if (message == "%EXIT") throw new Exception($"Stopped by {userName}");
+
                     message = $"{userName}: {message}";
                     //преобразовываем в масив байт
                     byte[] data = Encoding.Unicode.GetBytes(message);
@@ -44,15 +57,14 @@ namespace TcpClientDemo
                     message = stringBuilder.ToString();
                     Console.WriteLine($"Сервер: {message}");
                 }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    isEnabled = false;
+                }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            finally
-            {
-                tcpClient.Close();
-            }
+            
+            tcpClient.Close();
         }
     }
 }
