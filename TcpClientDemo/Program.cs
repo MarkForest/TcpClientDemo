@@ -64,6 +64,8 @@ namespace TcpClientDemo
                     isEnabled = false;
                 }
             }
+            
+            tcpClient.Close();
         }
     }
 }
